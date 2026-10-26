@@ -70,7 +70,12 @@
   document.head.appendChild(loader);
 
   gtag('js', new Date());
-  var config = { lp_name: lpName };
+  // 健康関連の LP なので、広告のリマーケティング・パーソナライズ用の信号は送らない
+  var config = {
+    lp_name: lpName,
+    allow_google_signals: false,
+    allow_ad_personalization_signals: false
+  };
   if (isInternal()) config.traffic_type = 'internal';
   gtag('config', GA4_MEASUREMENT_ID, config);
 
