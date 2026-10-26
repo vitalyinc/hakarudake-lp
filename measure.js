@@ -39,7 +39,8 @@
       if (value) data[key.replace(/^utm_/, '')] = value;
     });
     return Object.entries(data)
-      .map(function (entry) { return entry[0] + '=' + entry[1]; })
+      // 値に区切り文字（| や =）が入っても崩れないよう、値だけ符号化する
+      .map(function (entry) { return entry[0] + '=' + encodeURIComponent(entry[1]); })
       .join('|');
   }
 
