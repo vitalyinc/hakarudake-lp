@@ -12,8 +12,8 @@
  * FORM_SOURCE_ENTRY_ID を設定すると、フォームのリンクに流入元（lp / utm / gclid）を事前入力で渡す。
  */
 (function () {
-  // はかるだけ本体アプリ（GTM-KLBV454）と同じ GA4 プロパティ。LP の分はホスト名か lp_name で切り分ける
-  var GA4_MEASUREMENT_ID = 'G-EGNSRR55ZB';
+  // GA4 アカウント vitaly2023 のプロパティ「BWC LP」
+  var GA4_MEASUREMENT_ID = 'G-7JTKYSVP6C';
   var FORM_SOURCE_ENTRY_ID = ''; // 例: 'entry.123456789'（フォームの「流入元」設問）
 
   var FORM_URL_PREFIX = 'https://docs.google.com/forms/';
